@@ -36,12 +36,95 @@ body {
   background-color: #080605 !important;
 }
 
+/* =========================================================
+   Unified 1100px Centered Layout Grid
+   ========================================================= */
+.container,
+nav .container,
 main.container {
-  max-width: 960px !important;
-  flex: 1 0 auto;
-  padding-bottom: 3.5rem;
+  max-width: 1100px !important;
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: clamp(16px, 3vw, 32px) !important;
+  padding-right: clamp(16px, 3vw, 32px) !important;
+  box-sizing: border-box !important;
 }
 
+main.container {
+  flex: 1 0 auto;
+  padding-top: 1rem !important;
+  padding-bottom: 3.5rem !important;
+}
+
+/* =========================================================
+   Header Navigation Bar
+   ========================================================= */
+nav {
+  background-color: #080605 !important;
+  border-bottom: 1px solid #35251d !important;
+  padding: 0 !important;
+  margin: 0 0 2rem 0 !important;
+  width: 100% !important;
+}
+
+nav .container {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  min-height: 68px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+nav .logo {
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  float: none !important;
+}
+
+nav .logo img {
+  max-height: 34px !important;
+  height: 34px !important;
+  width: auto !important;
+  margin: 0 !important;
+  object-fit: contain !important;
+}
+
+nav ul {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0 !important;
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+nav ul li a {
+  font-family: 'Oxanium', monospace, sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  color: #c4b5ad !important;
+  padding: 10px 18px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  border-bottom: 2px solid transparent !important;
+  transition: color 0.15s ease, border-color 0.15s ease !important;
+  line-height: 1 !important;
+}
+
+nav ul li a:hover {
+  color: #ff773d !important;
+  border-bottom-color: #ce5828 !important;
+}
+
+/* =========================================================
+   Headings & Telemetry Lead
+   ========================================================= */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Oxanium', monospace, sans-serif !important;
   letter-spacing: 0.05em;
@@ -50,7 +133,7 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 
-/* Page Title Clean Flat Solid Style */
+/* Page Title Clean Flat Solid Style (Refined font size) */
 header.svelte-ngkazm h1,
 header h1 {
   background: none !important;
@@ -58,46 +141,22 @@ header h1 {
   -webkit-text-fill-color: #f7ede8 !important;
   color: #f7ede8 !important;
   font-family: 'Oxanium', monospace, sans-serif !important;
-  font-size: clamp(2rem, 4vw, 2.75rem) !important;
+  font-size: clamp(1.6rem, 2.8vw, 2.1rem) !important;
   font-weight: 800 !important;
   letter-spacing: 0.04em !important;
   text-transform: uppercase !important;
-  margin-bottom: 0.4rem !important;
+  margin: 0 0 0.4rem 0 !important;
+  line-height: 1.2 !important;
 }
 
 header.svelte-ngkazm p.lead,
 header p.lead {
   color: #a89a91 !important;
   font-family: 'Manrope', sans-serif !important;
-  font-size: 1.05rem !important;
+  font-size: 0.95rem !important;
   line-height: 1.5 !important;
-  max-width: 680px !important;
-}
-
-/* Upptime Header Navigation - Seamless with background */
-nav {
-  background-color: #080605 !important;
-  border-bottom: 1px solid #35251d !important;
-}
-
-nav a {
-  font-family: 'Oxanium', monospace, sans-serif !important;
-  letter-spacing: 0.06em;
-  font-weight: 600 !important;
-  text-transform: uppercase;
-  color: #c4b5ad !important;
-  transition: color 0.15s ease, border-bottom 0.15s ease;
-}
-
-nav a:hover {
-  color: #ff773d !important;
-}
-
-nav .logo img {
-  max-height: 38px !important;
-  height: 38px !important;
-  width: auto !important;
-  object-fit: contain !important;
+  max-width: 640px !important;
+  margin: 0 0 1.5rem 0 !important;
 }
 
 /* Hide Upptime's default minimal footer paragraph */
@@ -116,13 +175,13 @@ footer.svelte-jbr799 > p,
 
 /* =========================================================
    DustBowl Games Production Public Footer
-   Direct 1:1 seamless styling with website tokens
+   Direct 1:1 aligned with 1100px site container
    ========================================================= */
 
 .public-site-theme.public-footer {
-  padding: 32px 0 24px;
+  padding: 36px 0 24px;
   color: #f8f5ee;
-  background-color: #080605 !important; /* Seamless uniform dark shell */
+  background-color: #080605 !important;
   border-top: 1px solid #35251d;
   width: 100%;
   font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -137,15 +196,19 @@ footer.svelte-jbr799 > p,
 
 .public-site-theme.public-footer .public-footer-main,
 .public-site-theme.public-footer .public-footer-utility {
-  width: min(1400px, calc(100% - 64px));
-  margin-inline: auto;
+  max-width: 1100px !important;
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: clamp(16px, 3vw, 32px) !important;
+  padding-right: clamp(16px, 3vw, 32px) !important;
 }
 
 .public-site-theme.public-footer .public-footer-main {
-  padding: 8px 0 0;
+  padding-top: 0;
   display: grid;
-  grid-template-columns: 210px minmax(0, 1fr) minmax(360px, 440px);
-  column-gap: clamp(24px, 3.5vw, 56px);
+  grid-template-columns: 210px minmax(0, 1fr) minmax(320px, 380px);
+  column-gap: clamp(24px, 3.5vw, 48px);
   row-gap: 0;
   align-items: start;
 }
@@ -176,7 +239,7 @@ footer.svelte-jbr799 > p,
 }
 
 .public-footer-home-link img {
-  width: 193px;
+  width: 180px;
   height: auto;
   display: block;
 }
@@ -266,7 +329,7 @@ footer.svelte-jbr799 > p,
 }
 
 .public-site-theme.public-footer .public-footer-directory-group a {
-  min-height: 32px;
+  min-height: 30px;
   display: flex;
   align-items: center;
   color: #aaa79f;
@@ -297,7 +360,7 @@ footer.svelte-jbr799 > p,
   margin: 0 0 8px;
   color: #f8f5ee;
   font-family: "Oxanium", sans-serif;
-  font-size: clamp(20px, 2vw, 24px);
+  font-size: clamp(19px, 2vw, 23px);
   font-weight: 700;
   line-height: 1.15;
   letter-spacing: -.02em;
@@ -313,7 +376,7 @@ footer.svelte-jbr799 > p,
   font-size: 12.5px;
   line-height: 1.5;
   margin: 0 0 16px 0;
-  max-width: 380px;
+  max-width: 360px;
 }
 
 .public-site-theme.public-footer .public-footer-discord-cta {
@@ -347,7 +410,8 @@ footer.svelte-jbr799 > p,
 /* Utility Bar */
 .public-site-theme.public-footer .public-footer-utility {
   min-height: 44px;
-  padding: 16px 0 16px;
+  padding-top: 16px;
+  padding-bottom: 8px;
   display: grid;
   grid-template-columns: auto auto minmax(0, 1fr);
   gap: 12px 24px;
@@ -480,10 +544,6 @@ footer.svelte-jbr799 > p,
 }
 
 @media (max-width: 767px) {
-  .public-site-theme.public-footer .public-footer-main,
-  .public-site-theme.public-footer .public-footer-utility {
-    width: min(100% - 32px, 1400px);
-  }
   .public-site-theme.public-footer .public-footer-main {
     grid-template-columns: minmax(0, 1fr);
     gap: 18px;
