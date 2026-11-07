@@ -40,15 +40,6 @@ var dbFooterMarkup = `
         </ul>
       </div>
     </nav>
-
-    <section id="public-footer-newsletter" data-footer-action-panel class="public-footer-action-panel">
-      <h2 id="public-footer-action-title">Built for players who <span>give a damn.</span></h2>
-      <p class="public-footer-action-desc">Independent bare-metal nodes, zero sponsored clutter, and dedicated community moderators.</p>
-      <a href="https://discord.dustbowl.games" class="public-footer-discord-cta" target="_blank" rel="noopener">
-        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M19.5 5.3A16 16 0 0 0 15.4 4l-.5 1.1a15 15 0 0 0-5.8 0L8.5 4a16 16 0 0 0-4.1 1.3C1.8 9.2 1.1 13 1.5 16.8A16.5 16.5 0 0 0 6.6 19l1.2-1.7c-.7-.3-1.4-.7-2-1.2l.5-.4c3.8 1.8 7.9 1.8 11.7 0l.5.4c-.7.5-1.3.9-2 1.2l1.2 1.7a16.5 16.5 0 0 0 5.1-2.2c.5-4.4-.8-8.1-3.3-11.5ZM8.7 14.6c-1.1 0-2.1-1.1-2.1-2.4s.9-2.4 2.1-2.4c1.2 0 2.1 1.1 2.1 2.4s-.9 2.4-2.1 2.4Zm6.8 0c-1.1 0-2.1-1.1-2.1-2.4s.9-2.4 2.1-2.4c1.2 0 2.1 1.1 2.1 2.4s-.9 2.4-2.1 2.4Z"/></svg>
-        <span>Join Our Discord</span>
-      </a>
-    </section>
   </div>
 
   <section class="public-footer-utility" aria-labelledby="public-footer-social-title">
