@@ -43,8 +43,11 @@ var dbFooterMarkup = `
 
     <section id="public-footer-newsletter" data-footer-newsletter-panel class="public-footer-newsletter-panel">
       <h2 id="public-footer-newsletter-title">Built for players who <span>give a damn.</span></h2>
-      <p class="public-footer-cta-desc">Bare-metal nodes, zero sponsored clutter, and dedicated community moderators.</p>
-      <a href="https://discord.dustbowl.games" class="public-footer-discord-btn" target="_blank" rel="noopener">Join Our Discord</a>
+      <form class="newsletter-signup-row" action="https://dustbowl.games" method="get" onsubmit="event.preventDefault(); window.open('https://discord.dustbowl.games', '_blank');">
+        <input type="email" placeholder="Sign up for DustBowl news..." aria-label="Email address" required>
+        <button type="submit">Notify Me</button>
+      </form>
+      <p data-newsletter-help>Server launches, events, and important DustBowl news. Unsubscribe anytime.</p>
     </section>
   </div>
 
@@ -109,7 +112,6 @@ if (document.readyState === 'loading') {
   injectDbFooter();
 }
 
-// Ensure Sapper reactive router doesn't blow away our markup
 var observer = new MutationObserver(function() {
   var sapperFooter = document.querySelector('footer.svelte-jbr799') || document.querySelector('#sapper > footer');
   if (sapperFooter && !sapperFooter.querySelector('.public-footer-main')) {
