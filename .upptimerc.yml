@@ -8,23 +8,22 @@ sites:
   - name: DustBowl.Games (Public Web)
     url: https://dustbowl.games
     icon: https://assets.dustbowl.games/cms/web-assets/favicon-32.png
+  - name: Cloudflare Tunnel & Edge Gateway (db-rke2-lan)
+    url: https://vaultwarden.dustbowl.games/alive
+    icon: https://assets.dustbowl.games/cms/web-assets/favicon-32.png
   - name: Vaultwarden (Encrypted Password Vault)
     url: https://vaultwarden.dustbowl.games
     icon: https://vaultwarden.dustbowl.games/images/icon.png
   - name: Community Platform (Discourse)
     url: https://community.dustbowl.games
     icon: https://community.dustbowl.games/favicon.ico
-  - name: Public Knowledgebase
+  - name: Knowledgebase & Support Docs
     url: https://dustbowl.games/kb
     icon: https://assets.dustbowl.games/cms/web-assets/favicon-32.png
-  - name: Cluster Gateway Ingress (TCP Ping)
-    method: TCP_PING
-    url: 104.21.73.109:443
-    check: "tcp-ping"
 
 status-website:
   cname: status.dustbowl.games
-  name: DustBowl Games Status
+  name: " "
   logoUrl: https://assets.dustbowl.games/cms/branding/logo-wordmark-dark.png
   favicon: https://assets.dustbowl.games/cms/web-assets/favicon-32.png
   theme: dark
@@ -33,8 +32,8 @@ status-website:
   navbar:
     - title: "Home"
       href: https://dustbowl.games
-    - title: "Knowledgebase"
-      href: https://dustbowl.games/kb
+    - title: "Game Servers"
+      href: https://dustbowl.games/game-servers
     - title: "Community"
       href: https://community.dustbowl.games
     - title: "Support"
