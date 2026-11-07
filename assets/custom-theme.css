@@ -5,7 +5,7 @@
   --body-background-color: #080605;
   --body-text-color: #dedede;
   --card-background-color: #15100d;
-  --nav-background-color: #0f0b09;
+  --nav-background-color: #080605;
   --nav-border-bottom-color: #35251d;
   --nav-current-border-bottom-color: #ce5828;
   --card-border-color: #35251d;
@@ -33,12 +33,13 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: #080605 !important;
 }
 
 main.container {
   max-width: 960px !important;
   flex: 1 0 auto;
-  padding-bottom: 3rem;
+  padding-bottom: 3.5rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -49,7 +50,7 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 
-/* Page Title Clean Flat Solid Style (No gradient) */
+/* Page Title Clean Flat Solid Style */
 header.svelte-ngkazm h1,
 header h1 {
   background: none !important;
@@ -73,9 +74,9 @@ header p.lead {
   max-width: 680px !important;
 }
 
-/* Upptime Header Navigation */
+/* Upptime Header Navigation - Seamless with background */
 nav {
-  background-color: #0f0b09 !important;
+  background-color: #080605 !important;
   border-bottom: 1px solid #35251d !important;
 }
 
@@ -110,18 +111,19 @@ footer.svelte-jbr799 > p,
   padding: 0 !important;
   opacity: 1 !important;
   width: 100% !important;
+  background-color: transparent !important;
 }
 
 /* =========================================================
    DustBowl Games Production Public Footer
-   Direct 1:1 port of PublicFooter.razor & tailwind.input.css
+   Direct 1:1 seamless styling with website tokens
    ========================================================= */
 
 .public-site-theme.public-footer {
-  padding: 28px 0 0;
+  padding: 32px 0 24px;
   color: #f8f5ee;
-  background: #10110f;
-  border-top: 1px solid #353630;
+  background-color: #080605 !important; /* Seamless uniform dark shell */
+  border-top: 1px solid #35251d;
   width: 100%;
   font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
   box-sizing: border-box;
@@ -135,15 +137,15 @@ footer.svelte-jbr799 > p,
 
 .public-site-theme.public-footer .public-footer-main,
 .public-site-theme.public-footer .public-footer-utility {
-  width: min(1500px, calc(100% - 64px));
+  width: min(1400px, calc(100% - 64px));
   margin-inline: auto;
 }
 
 .public-site-theme.public-footer .public-footer-main {
   padding: 8px 0 0;
   display: grid;
-  grid-template-columns: 210px minmax(0, 1fr) minmax(380px, 480px);
-  column-gap: clamp(24px, 3vw, 48px);
+  grid-template-columns: 210px minmax(0, 1fr) minmax(360px, 440px);
+  column-gap: clamp(24px, 3.5vw, 56px);
   row-gap: 0;
   align-items: start;
 }
@@ -152,8 +154,8 @@ footer.svelte-jbr799 > p,
   content: "";
   grid-column: 1 / -1;
   height: 1px;
-  margin-top: 24px;
-  background: #353630;
+  margin-top: 28px;
+  background: #35251d;
 }
 
 /* Brand block */
@@ -163,9 +165,9 @@ footer.svelte-jbr799 > p,
   align-self: stretch;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
-  text-align: center;
+  text-align: left;
 }
 
 .public-footer-home-link {
@@ -185,13 +187,13 @@ footer.svelte-jbr799 > p,
   color: #8e8c85;
   font-size: 12px;
   line-height: 1.45;
-  text-align: center;
+  text-align: left;
 }
 
 .public-site-theme.public-footer .public-footer-status-badge {
   display: inline-flex;
   align-items: center;
-  align-self: center;
+  align-self: flex-start;
   gap: 7px;
   margin-top: 14px;
   padding: 5px 12px;
@@ -246,7 +248,7 @@ footer.svelte-jbr799 > p,
   line-height: 1.3;
   text-transform: uppercase;
   padding-bottom: 6px;
-  border-bottom: 1px solid #353630;
+  border-bottom: 1px solid #35251d;
   color: #f5f1e8;
 }
 
@@ -282,13 +284,16 @@ footer.svelte-jbr799 > p,
   color: #f15a24;
 }
 
-/* Right Panel: Newsletter / CTA */
-.public-site-theme.public-footer .public-footer-newsletter-panel {
+/* Right Panel: Clean Discord Community Action */
+.public-site-theme.public-footer .public-footer-action-panel {
   min-width: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.public-site-theme.public-footer .public-footer-newsletter-panel h2 {
+.public-site-theme.public-footer .public-footer-action-panel h2 {
   margin: 0 0 8px;
   color: #f8f5ee;
   font-family: "Oxanium", sans-serif;
@@ -299,80 +304,50 @@ footer.svelte-jbr799 > p,
   text-transform: none;
 }
 
-.public-site-theme.public-footer .public-footer-newsletter-panel h2 span {
+.public-site-theme.public-footer .public-footer-action-panel h2 span {
   color: #f15a24;
 }
 
-.public-site-theme.public-footer .public-footer-cta-desc {
+.public-site-theme.public-footer .public-footer-action-desc {
   color: #8e8c85;
-  font-size: 12px;
-  line-height: 1.45;
-  margin: 0 0 14px 0;
+  font-size: 12.5px;
+  line-height: 1.5;
+  margin: 0 0 16px 0;
+  max-width: 380px;
 }
 
-/* Authentic Newsletter-Signup inline input bar */
-.public-site-theme.public-footer .newsletter-signup-row {
-  display: flex;
-  align-items: stretch;
-  gap: 8px;
-  max-width: 100%;
-}
-
-.public-site-theme.public-footer .newsletter-signup-row input {
-  flex: 1 1 auto;
-  min-width: 0;
-  height: 40px;
-  padding: 0 12px;
-  background: #141612;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 4px;
-  color: #ffffff;
-  font-family: 'Manrope', sans-serif;
-  font-size: 13px;
-  outline: none;
-  transition: border-color 0.15s ease;
-}
-
-.public-site-theme.public-footer .newsletter-signup-row input:focus {
-  border-color: #ce5828;
-}
-
-.public-site-theme.public-footer .newsletter-signup-row input::placeholder {
-  color: #6d6b65;
-}
-
-.public-site-theme.public-footer .newsletter-signup-row button {
-  flex: 0 0 auto;
-  height: 40px;
-  padding: 0 16px;
+.public-site-theme.public-footer .public-footer-discord-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 22px;
   background: #ce5828;
   color: #ffffff;
-  border: none;
   border-radius: 4px;
   font-family: 'Oxanium', monospace, sans-serif;
   font-weight: 800;
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  cursor: pointer;
-  transition: background-color 0.15s ease;
+  text-decoration: none;
+  transition: background-color 0.15s ease, transform 0.1s ease;
 }
 
-.public-site-theme.public-footer .newsletter-signup-row button:hover {
+.public-site-theme.public-footer .public-footer-discord-cta svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.public-site-theme.public-footer .public-footer-discord-cta:hover {
   background: #e06a3a;
-}
-
-.public-site-theme.public-footer .public-footer-newsletter-panel [data-newsletter-help] {
-  margin: 6px 0 0;
-  color: #8e8c85;
-  font-size: 11px;
-  line-height: 1.4;
+  transform: translateY(-1px);
 }
 
 /* Utility Bar */
 .public-site-theme.public-footer .public-footer-utility {
   min-height: 44px;
-  padding: 14px 0 16px;
+  padding: 16px 0 16px;
   display: grid;
   grid-template-columns: auto auto minmax(0, 1fr);
   gap: 12px 24px;
@@ -479,11 +454,11 @@ footer.svelte-jbr799 > p,
     grid-column: 2;
     grid-row: 1;
   }
-  .public-site-theme.public-footer .public-footer-newsletter-panel {
+  .public-site-theme.public-footer .public-footer-action-panel {
     grid-column: 1 / -1;
     grid-row: 2;
     padding: 16px 0 0;
-    border-top: 1px solid #292a25;
+    border-top: 1px solid #35251d;
   }
 }
 
@@ -507,7 +482,7 @@ footer.svelte-jbr799 > p,
 @media (max-width: 767px) {
   .public-site-theme.public-footer .public-footer-main,
   .public-site-theme.public-footer .public-footer-utility {
-    width: min(100% - 32px, 1500px);
+    width: min(100% - 32px, 1400px);
   }
   .public-site-theme.public-footer .public-footer-main {
     grid-template-columns: minmax(0, 1fr);
@@ -530,7 +505,7 @@ footer.svelte-jbr799 > p,
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 16px;
   }
-  .public-site-theme.public-footer .public-footer-newsletter-panel {
+  .public-site-theme.public-footer .public-footer-action-panel {
     padding: 14px 0 0;
   }
   .public-site-theme.public-footer .public-footer-utility {
@@ -542,11 +517,5 @@ footer.svelte-jbr799 > p,
 @media (max-width: 480px) {
   .public-site-theme.public-footer .public-footer-directory {
     grid-template-columns: minmax(0, 1fr);
-  }
-  .public-site-theme.public-footer .newsletter-signup-row {
-    flex-direction: column;
-  }
-  .public-site-theme.public-footer .newsletter-signup-row button {
-    width: 100%;
   }
 }
