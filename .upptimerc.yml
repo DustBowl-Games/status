@@ -8,18 +8,21 @@ sites:
   - name: DustBowl.Games (Public Web)
     url: https://dustbowl.games
     icon: https://assets.dustbowl.games/cms/web-assets/favicon-32.png
+    maxResponseTime: 10000
   - name: Cloudflare Tunnel & Edge Gateway (db-rke2-lan)
     url: https://vaultwarden.dustbowl.games/alive
     icon: https://assets.dustbowl.games/cms/web-assets/favicon-32.png
+    maxResponseTime: 10000
   - name: Vaultwarden (Encrypted Password Vault)
     url: https://vaultwarden.dustbowl.games
     icon: https://vaultwarden.dustbowl.games/images/icon.png
-  - name: Community Platform (Discourse)
-    url: https://community.dustbowl.games
-    icon: https://community.dustbowl.games/favicon.ico
+    maxResponseTime: 10000
   - name: Knowledgebase & Support Docs
     url: https://dustbowl.games/kb
     icon: https://assets.dustbowl.games/cms/web-assets/favicon-32.png
+    maxResponseTime: 10000
+
+delay: 2000
 
 status-website:
   cname: status.dustbowl.games
@@ -27,6 +30,7 @@ status-website:
   logoUrl: https://assets.dustbowl.games/cms/branding/logo-wordmark-dark.png
   favicon: https://assets.dustbowl.games/cms/web-assets/favicon-32.png
   theme: dark
+  themeUrl: https://status.dustbowl.games/custom-theme.css
   introTitle: "Operations & Fleet Status"
   introMessage: "Real-time health, latency telemetry, and incident reporting across DustBowl's bare-metal game infrastructure."
   navbar:
@@ -35,9 +39,12 @@ status-website:
     - title: "Game Servers"
       href: https://dustbowl.games/game-servers
     - title: "Community"
-      href: https://community.dustbowl.games
+      href: https://staging.dustbowl.games/community
     - title: "Support"
       href: https://dustbowl.games/contact
+
+i18n:
+  footer: "© 2026 [DustBowl Games LLC](https://dustbowl.games). Continuous health telemetry across bare-metal fleet operations."
 
 notifications:
   - type: ntfy
