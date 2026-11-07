@@ -118,7 +118,7 @@ footer.svelte-jbr799 > p,
    ========================================================= */
 
 .public-site-theme.public-footer {
-  padding: 24px 0 0;
+  padding: 28px 0 0;
   color: #f8f5ee;
   background: #10110f;
   border-top: 1px solid #353630;
@@ -142,8 +142,8 @@ footer.svelte-jbr799 > p,
 .public-site-theme.public-footer .public-footer-main {
   padding: 8px 0 0;
   display: grid;
-  grid-template-columns: 209px minmax(0, 1fr) minmax(360px, 460px);
-  column-gap: 0;
+  grid-template-columns: 210px minmax(0, 1fr) minmax(380px, 480px);
+  column-gap: clamp(24px, 3vw, 48px);
   row-gap: 0;
   align-items: start;
 }
@@ -152,7 +152,7 @@ footer.svelte-jbr799 > p,
   content: "";
   grid-column: 1 / -1;
   height: 1px;
-  margin-top: 20px;
+  margin-top: 24px;
   background: #353630;
 }
 
@@ -227,10 +227,10 @@ footer.svelte-jbr799 > p,
   width: 100%;
   margin-inline: 0;
   min-width: 0;
-  padding: 2px 0 2px clamp(24px, 2.5vw, 40px);
+  padding: 0;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  column-gap: clamp(18px, 2vw, 32px);
+  column-gap: clamp(16px, 2.5vw, 36px);
 }
 
 .public-site-theme.public-footer .public-footer-directory-group {
@@ -240,18 +240,18 @@ footer.svelte-jbr799 > p,
 .public-site-theme.public-footer .public-footer-directory-group h2 {
   margin: 0;
   font-family: "Oxanium", sans-serif;
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: .08em;
   line-height: 1.3;
   text-transform: uppercase;
-  padding-bottom: 5px;
+  padding-bottom: 6px;
   border-bottom: 1px solid #353630;
   color: #f5f1e8;
 }
 
 .public-site-theme.public-footer .public-footer-directory-group ul {
-  margin: 6px 0 0;
+  margin: 8px 0 0;
   padding: 0;
   display: grid;
   grid-template-columns: minmax(0, 1fr);
@@ -268,9 +268,12 @@ footer.svelte-jbr799 > p,
   display: flex;
   align-items: center;
   color: #aaa79f;
-  font-size: 14px;
+  font-family: 'Manrope', sans-serif;
+  font-size: 13.5px;
   font-weight: 500;
   line-height: 1.25;
+  text-transform: none;
+  letter-spacing: normal;
   text-decoration: none;
   transition: color 0.15s ease;
 }
@@ -282,14 +285,15 @@ footer.svelte-jbr799 > p,
 /* Right Panel: Newsletter / CTA */
 .public-site-theme.public-footer .public-footer-newsletter-panel {
   min-width: 0;
-  padding: 2px 0 2px clamp(24px, 2.5vw, 40px);
+  padding: 0;
 }
 
 .public-site-theme.public-footer .public-footer-newsletter-panel h2 {
-  margin: 0 0 10px;
+  margin: 0 0 8px;
   color: #f8f5ee;
   font-family: "Oxanium", sans-serif;
-  font-size: clamp(20px, 2vw, 26px);
+  font-size: clamp(20px, 2vw, 24px);
+  font-weight: 700;
   line-height: 1.15;
   letter-spacing: -.02em;
   text-transform: none;
@@ -301,40 +305,77 @@ footer.svelte-jbr799 > p,
 
 .public-site-theme.public-footer .public-footer-cta-desc {
   color: #8e8c85;
-  font-size: 13px;
-  line-height: 1.5;
-  margin: 0 0 16px 0;
+  font-size: 12px;
+  line-height: 1.45;
+  margin: 0 0 14px 0;
 }
 
-.public-site-theme.public-footer .public-footer-discord-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+/* Authentic Newsletter-Signup inline input bar */
+.public-site-theme.public-footer .newsletter-signup-row {
+  display: flex;
+  align-items: stretch;
   gap: 8px;
+  max-width: 100%;
+}
+
+.public-site-theme.public-footer .newsletter-signup-row input {
+  flex: 1 1 auto;
+  min-width: 0;
+  height: 40px;
+  padding: 0 12px;
+  background: #141612;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 4px;
+  color: #ffffff;
+  font-family: 'Manrope', sans-serif;
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.public-site-theme.public-footer .newsletter-signup-row input:focus {
+  border-color: #ce5828;
+}
+
+.public-site-theme.public-footer .newsletter-signup-row input::placeholder {
+  color: #6d6b65;
+}
+
+.public-site-theme.public-footer .newsletter-signup-row button {
+  flex: 0 0 auto;
+  height: 40px;
+  padding: 0 16px;
   background: #ce5828;
   color: #ffffff;
-  padding: 10px 20px;
+  border: none;
   border-radius: 4px;
   font-family: 'Oxanium', monospace, sans-serif;
-  font-weight: 700;
-  font-size: 12px;
+  font-weight: 800;
+  font-size: 11px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  text-decoration: none;
+  cursor: pointer;
   transition: background-color 0.15s ease;
 }
 
-.public-site-theme.public-footer .public-footer-discord-btn:hover {
-  background: #e86d38;
+.public-site-theme.public-footer .newsletter-signup-row button:hover {
+  background: #e06a3a;
+}
+
+.public-site-theme.public-footer .public-footer-newsletter-panel [data-newsletter-help] {
+  margin: 6px 0 0;
+  color: #8e8c85;
+  font-size: 11px;
+  line-height: 1.4;
 }
 
 /* Utility Bar */
 .public-site-theme.public-footer .public-footer-utility {
   min-height: 44px;
-  padding: 12px 0 16px;
+  padding: 14px 0 16px;
   display: grid;
   grid-template-columns: auto auto minmax(0, 1fr);
-  gap: 12px 20px;
+  gap: 12px 24px;
   align-items: center;
 }
 
@@ -367,8 +408,8 @@ footer.svelte-jbr799 > p,
 }
 
 .public-site-theme.public-footer .public-footer-social-rail a svg {
-  width: 18px;
-  height: 18px;
+  width: 17px;
+  height: 17px;
   fill: currentColor;
 }
 
@@ -382,7 +423,7 @@ footer.svelte-jbr799 > p,
   align-items: center;
   justify-content: flex-end;
   flex-wrap: wrap;
-  gap: 8px 18px;
+  gap: 6px 18px;
 }
 
 .public-site-theme.public-footer .public-footer-legal-links {
@@ -394,9 +435,11 @@ footer.svelte-jbr799 > p,
 
 .public-site-theme.public-footer .public-footer-legal-links a {
   color: #aaa79f;
+  font-family: 'Manrope', sans-serif;
   font-size: 12px;
   font-weight: 600;
   line-height: 1.25;
+  text-transform: none;
   text-decoration: none;
   transition: color 0.15s ease;
 }
@@ -420,7 +463,7 @@ footer.svelte-jbr799 > p,
   text-align: right;
 }
 
-/* Responsive Overrides matching website */
+/* Responsive Overrides */
 @media (max-width: 1279px) {
   .public-site-theme.public-footer .public-footer-main {
     grid-template-columns: 209px minmax(0, 1fr);
@@ -435,7 +478,6 @@ footer.svelte-jbr799 > p,
   .public-site-theme.public-footer .public-footer-directory {
     grid-column: 2;
     grid-row: 1;
-    padding-left: clamp(20px, 2vw, 32px);
   }
   .public-site-theme.public-footer .public-footer-newsletter-panel {
     grid-column: 1 / -1;
@@ -452,6 +494,9 @@ footer.svelte-jbr799 > p,
   }
   .public-site-theme.public-footer .public-footer-legal-cluster {
     grid-column: 1 / -1;
+    justify-content: flex-start;
+  }
+  .public-site-theme.public-footer .public-footer-legal-links {
     justify-content: flex-start;
   }
   .public-site-theme.public-footer .public-footer-disclaimer {
@@ -497,5 +542,11 @@ footer.svelte-jbr799 > p,
 @media (max-width: 480px) {
   .public-site-theme.public-footer .public-footer-directory {
     grid-template-columns: minmax(0, 1fr);
+  }
+  .public-site-theme.public-footer .newsletter-signup-row {
+    flex-direction: column;
+  }
+  .public-site-theme.public-footer .newsletter-signup-row button {
+    width: 100%;
   }
 }
