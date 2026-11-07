@@ -81,10 +81,17 @@ nav .logo img {
   object-fit: contain !important;
 }
 
-/* Hide Upptime's default minimal footer */
-footer.svelte-jbr799,
-#sapper > footer {
+/* Hide Upptime's default minimal footer paragraph */
+footer.svelte-jbr799 > p,
+#sapper > footer > p {
   display: none !important;
+}
+
+#sapper > footer {
+  margin-top: 0 !important;
+  padding: 0 !important;
+  opacity: 1 !important;
+  width: 100% !important;
 }
 
 /* =========================================================
@@ -98,6 +105,7 @@ footer.svelte-jbr799,
   margin-top: 60px;
   width: 100%;
   font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+  text-align: left;
 }
 
 .db-footer-container {
@@ -298,7 +306,7 @@ footer.svelte-jbr799,
 }
 
 .db-social-link:hover {
-  color: #ff834f;
+  color: #ff773d;
   border-color: #ce5828;
   background: #231915;
 }
