@@ -6,10 +6,6 @@ var dbFooterMarkup = `
         <img data-footer-logo src="https://assets.dustbowl.games/cms/branding/logo-wordmark-dark.png" alt="DustBowl.Games" width="193" height="39" loading="lazy">
       </a>
       <p class="public-footer-tagline">High-performance gaming servers &amp; community infrastructure.</p>
-      <a href="https://status.dustbowl.games" data-footer-status class="public-footer-status-badge" aria-label="Service Status: All systems operational">
-        <span class="public-footer-status-dot" aria-hidden="true"></span>
-        <span>All Systems Operational</span>
-      </a>
     </section>
 
     <nav aria-label="Explore DustBowl" class="public-footer-directory" itemscope itemtype="https://schema.org/SiteNavigationElement">
