@@ -72,7 +72,6 @@ var dbFooterMarkup = `
         <a href="https://dustbowl.games/code-of-conduct" data-footer-legal-link="Code of Conduct">Code of Conduct</a>
         <a href="https://dustbowl.games/sla" data-footer-legal-link="SLA">SLA</a>
       </nav>
-      <div data-footer-legal class="public-footer-legal">&copy; 2026 DustBowl.Games. All Rights Reserved.</div>
     </div>
   </section>
 </footer>
