@@ -572,3 +572,32 @@ footer.svelte-jbr799 > p,
     row-gap: 16px !important;
   }
 }
+
+
+/* Explicitly eliminate borders on footer directory, social rail, and legal elements */
+.public-site-theme.public-footer .public-footer-directory,
+.public-site-theme.public-footer .public-footer-social-rail,
+.public-site-theme.public-footer .public-footer-socials,
+.public-site-theme.public-footer .public-footer-legal-cluster,
+.public-site-theme.public-footer .public-footer-legal-links,
+.public-site-theme.public-footer nav,
+.public-site-theme.public-footer ul,
+.public-site-theme.public-footer li {
+  border: none !important;
+  border-bottom: none !important;
+  border-top: none !important;
+  box-shadow: none !important;
+}
+
+/* Ensure only the clean full horizontal bar between sections remains */
+.public-site-theme.public-footer .public-footer-main::after {
+  content: "" !important;
+  display: block !important;
+  grid-column: 1 / -1 !important;
+  width: 100% !important;
+  height: 1px !important;
+  margin-top: 24px !important;
+  margin-bottom: 8px !important;
+  background: #35251d !important;
+  border: none !important;
+}
