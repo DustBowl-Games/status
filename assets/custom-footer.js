@@ -65,10 +65,6 @@ var dbFooterMarkup = `
       </a>
     </nav>
     <div class="public-footer-legal-cluster">
-      <a href="#sapper" data-footer-back-to-top class="public-footer-back-to-top" aria-label="Back to top">
-        <span>Back to top</span>
-        <svg aria-hidden="true" focusable="false" viewBox="0 0 16 16"><path d="M8 12V4M4 7l4-4 4 4" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
       <nav aria-label="Legal" class="public-footer-legal-links">
         <a href="https://dustbowl.games/returns-and-refunds" data-footer-legal-link="Returns &amp; Refunds">Returns &amp; Refunds</a>
         <a href="https://dustbowl.games/privacy-policy" data-footer-legal-link="Privacy Policy">Privacy Policy</a>
