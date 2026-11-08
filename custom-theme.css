@@ -601,3 +601,8 @@ footer.svelte-jbr799 > p,
   background: #35251d !important;
   border: none !important;
 }
+
+/* Ensure no raw text title appears next to nav logo */
+nav .logo > div:not(.logo) {
+  display: none !important;
+}
