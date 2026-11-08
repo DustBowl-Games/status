@@ -42,7 +42,7 @@ status-website:
     - title: "Game Servers"
       href: https://dustbowl.games/game-servers
     - title: "Community"
-      href: https://staging.dustbowl.games/community
+      href: https://dustbowl.games/community
     - title: "Support"
       href: https://dustbowl.games/contact
 
