@@ -193,7 +193,7 @@ footer.svelte-jbr799 > p,
   color: #f8f5ee !important;
   background-color: #080605 !important;
   background: #080605 !important;
-  border-top: 1px solid #35251d !important;
+  border-top: none !important;
   width: 100% !important;
   font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif !important;
   box-sizing: border-box !important;
@@ -227,9 +227,12 @@ footer.svelte-jbr799 > p,
 }
 
 .public-site-theme.public-footer .public-footer-main::after {
-  display: none !important;
-  content: none !important;
-  height: 0 !important;
+  content: "" !important;
+  display: block !important;
+  grid-column: 1 / -1 !important;
+  height: 1px !important;
+  margin-top: 18px !important;
+  background: #35251d !important;
 }
 
 /* Brand block */
@@ -524,7 +527,7 @@ footer.svelte-jbr799 > p,
     margin-top: 0 !important;
     padding: 18px 0 8px !important;
     border-left: 0 !important;
-    border-top: 1px solid #35251d !important;
+    border-top: none !important;
     display: grid !important;
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     column-gap: 24px !important;
