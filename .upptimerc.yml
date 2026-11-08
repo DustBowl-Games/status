@@ -26,7 +26,8 @@ delay: 2000
 
 status-website:
   cname: status.dustbowl.games
-  name: " "
+  name: "Operations & Fleet Status – DustBowl Games"
+  hideNavTitle: true
   logoUrl: https://assets.dustbowl.games/cms/branding/logo-wordmark-dark.png
   favicon: https://assets.dustbowl.games/cms/web-assets/favicon-32.png
   theme: dark
