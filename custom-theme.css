@@ -37,10 +37,10 @@ body {
 }
 
 /* =========================================================
-   Unified 1100px Centered Layout Grid
+   Unified Centered Layout Container
    ========================================================= */
 .container,
-nav .container,
+header.svelte-a08hsz > .container,
 main.container {
   max-width: 1100px !important;
   width: 100% !important;
@@ -58,17 +58,23 @@ main.container {
 }
 
 /* =========================================================
-   Header Navigation Bar
+   Top Header Navigation Bar (Upptime Sapper Layout)
+   Strictly scoped to header.svelte-a08hsz > nav or #sapper > nav
+   so it NEVER leaks into footer .public-footer-directory
    ========================================================= */
-nav {
+#sapper > nav,
+header nav {
   background-color: #080605 !important;
   border-bottom: 1px solid #35251d !important;
   padding: 0 !important;
   margin: 0 0 2rem 0 !important;
   width: 100% !important;
+  white-space: nowrap !important;
+  overflow-x: auto !important;
 }
 
-nav .container {
+#sapper > nav .container,
+header nav .container {
   display: flex !important;
   align-items: center !important;
   justify-content: space-between !important;
@@ -77,7 +83,8 @@ nav .container {
   padding-bottom: 0 !important;
 }
 
-nav .logo {
+#sapper > nav .logo,
+header nav .logo {
   display: inline-flex !important;
   align-items: center !important;
   padding: 0 !important;
@@ -85,7 +92,8 @@ nav .logo {
   float: none !important;
 }
 
-nav .logo img {
+#sapper > nav .logo img,
+header nav .logo img {
   max-height: 34px !important;
   height: 34px !important;
   width: auto !important;
@@ -93,7 +101,8 @@ nav .logo img {
   object-fit: contain !important;
 }
 
-nav ul {
+#sapper > nav ul,
+header nav ul {
   display: flex !important;
   align-items: center !important;
   gap: 0 !important;
@@ -102,7 +111,8 @@ nav ul {
   padding: 0 !important;
 }
 
-nav ul li a {
+#sapper > nav ul li a,
+header nav ul li a {
   font-family: 'Oxanium', monospace, sans-serif !important;
   font-size: 14.5px !important;
   font-weight: 600 !important;
@@ -117,7 +127,8 @@ nav ul li a {
   line-height: 1 !important;
 }
 
-nav ul li a:hover {
+#sapper > nav ul li a:hover,
+header nav ul li a:hover {
   color: #ff773d !important;
   border-bottom-color: #ce5828 !important;
 }
@@ -206,9 +217,9 @@ footer.svelte-jbr799 > p,
 
 .public-site-theme.public-footer .public-footer-main {
   padding-top: 0;
-  display: grid;
-  grid-template-columns: 240px minmax(0, 1fr);
-  column-gap: clamp(32px, 5vw, 64px);
+  display: grid !important;
+  grid-template-columns: 240px minmax(0, 1fr) !important;
+  column-gap: clamp(32px, 5vw, 64px) !important;
   row-gap: 0;
   align-items: start;
 }
@@ -287,125 +298,76 @@ footer.svelte-jbr799 > p,
   box-shadow: 0 0 6px rgba(52, 211, 153, 0.6);
 }
 
-/* Directory Nav */
+/* Directory Nav: Bulletproof flex layout matching staging.dustbowl.games */
 .public-site-theme.public-footer .public-footer-directory {
-  width: 100%;
-  margin-inline: 0;
-  min-width: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(140px, 1fr));
-  column-gap: clamp(24px, 4vw, 56px);
-  justify-content: end;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: flex-end !important;
+  gap: clamp(32px, 5vw, 64px) !important;
+  white-space: normal !important;
+  overflow: visible !important;
 }
 
 .public-site-theme.public-footer .public-footer-directory-group {
-  min-width: 0;
+  min-width: 140px !important;
+  flex: 0 1 auto !important;
 }
 
 .public-site-theme.public-footer .public-footer-directory-group h2 {
-  margin: 0;
-  font-family: "Oxanium", sans-serif;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: .08em;
-  line-height: 1.3;
-  text-transform: uppercase;
-  padding-bottom: 6px;
-  border-bottom: 1px solid #35251d;
-  color: #f5f1e8;
+  margin: 0 !important;
+  font-family: "Oxanium", sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: .08em !important;
+  line-height: 1.3 !important;
+  text-transform: uppercase !important;
+  padding-bottom: 6px !important;
+  border-bottom: 1px solid #35251d !important;
+  color: #f5f1e8 !important;
 }
 
 .public-site-theme.public-footer .public-footer-directory-group ul {
-  margin: 8px 0 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: 0;
-  list-style: none;
+  display: flex !important;
+  flex-direction: column !important;
+  list-style: none !important;
+  margin: 8px 0 0 0 !important;
+  padding: 0 !important;
+  gap: 0 !important;
 }
 
 .public-site-theme.public-footer .public-footer-directory-group li {
-  min-width: 0;
+  display: block !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .public-site-theme.public-footer .public-footer-directory-group a {
-  min-height: 30px;
-  display: flex;
-  align-items: center;
-  color: #aaa79f;
-  font-family: 'Manrope', sans-serif;
-  font-size: 13.5px;
-  font-weight: 500;
-  line-height: 1.25;
-  text-transform: none;
-  letter-spacing: normal;
-  text-decoration: none;
-  transition: color 0.15s ease;
+  display: flex !important;
+  align-items: center !important;
+  width: 100% !important;
+  min-height: 30px !important;
+  white-space: normal !important;
+  color: #aaa79f !important;
+  font-family: 'Manrope', sans-serif !important;
+  font-size: 13.5px !important;
+  font-weight: 500 !important;
+  line-height: 1.25 !important;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+  text-decoration: none !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  transition: color 0.15s ease !important;
 }
 
 .public-site-theme.public-footer .public-footer-directory-group a:hover {
-  color: #f15a24;
-}
-
-/* Right Panel: Clean Discord Community Action */
-.public-site-theme.public-footer .public-footer-action-panel {
-  min-width: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.public-site-theme.public-footer .public-footer-action-panel h2 {
-  margin: 0 0 8px;
-  color: #f8f5ee;
-  font-family: "Oxanium", sans-serif;
-  font-size: clamp(19px, 2vw, 23px);
-  font-weight: 700;
-  line-height: 1.15;
-  letter-spacing: -.02em;
-  text-transform: none;
-}
-
-.public-site-theme.public-footer .public-footer-action-panel h2 span {
-  color: #f15a24;
-}
-
-.public-site-theme.public-footer .public-footer-action-desc {
-  color: #8e8c85;
-  font-size: 12.5px;
-  line-height: 1.5;
-  margin: 0 0 16px 0;
-  max-width: 360px;
-}
-
-.public-site-theme.public-footer .public-footer-discord-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 22px;
-  background: #ce5828;
-  color: #ffffff;
-  border-radius: 4px;
-  font-family: 'Oxanium', monospace, sans-serif;
-  font-weight: 800;
-  font-size: 12px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: background-color 0.15s ease, transform 0.1s ease;
-}
-
-.public-site-theme.public-footer .public-footer-discord-cta svg {
-  width: 18px;
-  height: 18px;
-  fill: currentColor;
-}
-
-.public-site-theme.public-footer .public-footer-discord-cta:hover {
-  background: #e06a3a;
-  transform: translateY(-1px);
+  color: #f15a24 !important;
+  border: none !important;
 }
 
 /* Utility Bar */
@@ -523,8 +485,8 @@ footer.svelte-jbr799 > p,
 
 @media (max-width: 767px) {
   .public-site-theme.public-footer .public-footer-main {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 18px;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 18px !important;
   }
   .public-site-theme.public-footer .public-footer-brand {
     max-width: 100%;
@@ -539,21 +501,12 @@ footer.svelte-jbr799 > p,
     align-self: flex-start;
   }
   .public-site-theme.public-footer .public-footer-directory {
-    padding: 0;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 16px;
-  }
-  .public-site-theme.public-footer .public-footer-action-panel {
-    padding: 14px 0 0;
+    flex-wrap: wrap !important;
+    justify-content: flex-start !important;
+    gap: 20px !important;
   }
   .public-site-theme.public-footer .public-footer-utility {
     grid-template-columns: minmax(0, 1fr);
     gap: 12px;
-  }
-}
-
-@media (max-width: 480px) {
-  .public-site-theme.public-footer .public-footer-directory {
-    grid-template-columns: minmax(0, 1fr);
   }
 }
