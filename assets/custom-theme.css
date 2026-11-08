@@ -227,11 +227,9 @@ footer.svelte-jbr799 > p,
 }
 
 .public-site-theme.public-footer .public-footer-main::after {
-  content: "";
-  grid-column: 1 / -1;
-  height: 1px;
-  margin-top: 18px;
-  background: #35251d !important;
+  display: none !important;
+  content: none !important;
+  height: 0 !important;
 }
 
 /* Brand block */
