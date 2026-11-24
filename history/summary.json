@@ -4,18 +4,20 @@
     "url": "https://dustbowl.games",
     "icon": "https://assets.dustbowl.games/cms/web-assets/favicon-32.png",
     "slug": "dust-bowl-games-public-web",
-    "status": "up",
+    "status": "down",
     "uptime": "100.00%",
-    "uptimeDay": "100.00%",
+    "uptimeDay": "99.97%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 323,
-    "timeDay": 380,
-    "timeWeek": 301,
-    "timeMonth": 323,
-    "timeYear": 323,
-    "dailyMinutesDown": {}
+    "time": 317,
+    "timeDay": 283,
+    "timeWeek": 287,
+    "timeMonth": 317,
+    "timeYear": 317,
+    "dailyMinutesDown": {
+      "2026-11-24": 0
+    }
   },
   {
     "name": "Cloudflare Tunnel & Edge Gateway (db-rke2-lan)",
@@ -58,17 +60,19 @@
     "url": "https://dustbowl.games/kb",
     "icon": "https://assets.dustbowl.games/cms/web-assets/favicon-32.png",
     "slug": "knowledgebase-and-support-docs",
-    "status": "up",
+    "status": "down",
     "uptime": "100.00%",
-    "uptimeDay": "100.00%",
+    "uptimeDay": "99.99%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 251,
-    "timeDay": 198,
-    "timeWeek": 335,
-    "timeMonth": 251,
-    "timeYear": 251,
-    "dailyMinutesDown": {}
+    "time": 248,
+    "timeDay": 188,
+    "timeWeek": 315,
+    "timeMonth": 248,
+    "timeYear": 248,
+    "dailyMinutesDown": {
+      "2026-11-24": 0
+    }
   }
 ]
