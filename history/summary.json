@@ -4,19 +4,20 @@
     "url": "https://dustbowl.games",
     "icon": "https://assets.dustbowl.games/cms/web-assets/favicon-32.png",
     "slug": "dust-bowl-games-public-web",
-    "status": "down",
-    "uptime": "100.00%",
-    "uptimeDay": "99.97%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
-    "time": 317,
-    "timeDay": 283,
-    "timeWeek": 287,
-    "timeMonth": 317,
-    "timeYear": 317,
+    "status": "up",
+    "uptime": "97.92%",
+    "uptimeDay": "64.32%",
+    "uptimeWeek": "94.90%",
+    "uptimeMonth": "97.92%",
+    "uptimeYear": "97.92%",
+    "time": 323,
+    "timeDay": 346,
+    "timeWeek": 307,
+    "timeMonth": 323,
+    "timeYear": 323,
     "dailyMinutesDown": {
-      "2026-11-24": 0
+      "2026-11-25": 62,
+      "2026-11-24": 452
     }
   },
   {
@@ -60,19 +61,20 @@
     "url": "https://dustbowl.games/kb",
     "icon": "https://assets.dustbowl.games/cms/web-assets/favicon-32.png",
     "slug": "knowledgebase-and-support-docs",
-    "status": "down",
-    "uptime": "100.00%",
-    "uptimeDay": "99.99%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
-    "time": 248,
-    "timeDay": 188,
-    "timeWeek": 315,
-    "timeMonth": 248,
-    "timeYear": 248,
+    "status": "up",
+    "uptime": "97.92%",
+    "uptimeDay": "64.33%",
+    "uptimeWeek": "94.90%",
+    "uptimeMonth": "97.92%",
+    "uptimeYear": "97.92%",
+    "time": 255,
+    "timeDay": 266,
+    "timeWeek": 327,
+    "timeMonth": 255,
+    "timeYear": 255,
     "dailyMinutesDown": {
-      "2026-11-24": 0
+      "2026-11-25": 62,
+      "2026-11-24": 452
     }
   }
 ]
